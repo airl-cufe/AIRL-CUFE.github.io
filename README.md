@@ -1,16 +1,27 @@
 # AI Research Lab website
 
-A responsive, dependency-free static site based on `docs/Regulations.md`.
+A responsive, dependency-free static website for Cairo University's Artificial Intelligence Research Lab (AIRL).
+
+## Pages
+
+- `public/index.html` — Home
+- `public/about.html` — Mission, history, and staff
+- `public/collaborations.html` — Industry and academic collaboration
+- `public/documentation.html` — Account access, connection, and user guide
+- `public/resources.html` — Compute, storage, and quotas
 
 ## Preview locally
 
-Open `index.html` in a browser, or run a local static file server from this directory.
+Open `public/index.html` in a browser, or serve the `public` directory with a local static file server.
 
-## Publish with Netlify
+## Deploy to Netlify
 
-1. Import this project directory into a Git provider and push it to a private or public repository, or upload the site files using Netlify's manual deploy.
-2. In Netlify, create a new site and select the repository, or drag the project folder into Netlify Drop.
-3. Set the publish directory to `.`. There is no build command.
-4. After deployment, use the generated `*.netlify.app` URL to check the live site. Connect a custom domain in Netlify's domain settings if desired.
+The root `netlify.toml` sets `public` as the publish directory. There is no build command. Deploy from the project root with:
 
-The Netlify configuration sets basic response headers. The access section links to the lab-provided Google Form; Google sign-in may be required. The site itself does not collect or transmit form answers. The published regulations do not state the supervisor-confirmation email address, so confirm that process and finish any additional staff profiles before announcing the site.
+```sh
+netlify deploy --prod --dir public
+```
+
+The original source documents and admin notes remain in `docs/` and are deliberately excluded from the published directory. The admin user-creation instructions contain privileged server operations; a hidden route or `noindex` page would not secure them on a public static site. Do not copy them to `public/` without adding real access control.
+
+The public documentation links to the previously approved access form; Google sign-in may be required. It also makes the conflicting project-storage backup statements in `Resources.md` and `Regulations.md` explicit so users can confirm the current policy with AIRL.
