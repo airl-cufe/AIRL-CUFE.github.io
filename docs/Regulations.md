@@ -1,21 +1,23 @@
-# Artificial Intelligence Research Lab Governance
+# Artificial Intelligence Research Lab (AIRL) Governance
 
 ## 1. Introduction
 
-The Artificial Intelligence (AI) Research Lab provides high-performance computing (HPC) resources to support research, education, innovation, and student projects in artificial intelligence, machine learning, data science, and related fields. The laboratory operates a shared computing infrastructure consisting of GPU workstations and GPU servers managed as a single Slurm cluster.
+The Artificial Intelligence Research Lab (AIRL) provides high-performance computing (HPC) resources to support research, education, innovation, and student projects in artificial intelligence, machine learning, data science, and related fields. AIRL operates a shared computing infrastructure consisting of GPU workstations and GPU servers managed as a single Slurm cluster.
 
-AI Lab provides a basic level of high performance research computing resources for members of Cairo University's Faculty of Engineering (CUFE) at no cost.
+AIRL provides a basic level of high performance research computing resources for members of Cairo University's Faculty of Engineering (CUFE) at no cost.
 
-These regulations define the policies governing access, resource allocation, data management, security, and acceptable use of the laboratory resources.
+These regulations define the policies governing access, resource allocation, data management, security, and acceptable use of the lab resources.
 
 ## 2. Lab Infrastructure:
 
-The laboratory consists of:
+AIRL consists of:
 - 10 workstations equipped with Intel i9 and NVIDIA RTX 5090 GPUs.
 - 3 servers equipped with AMD ThreadRipper and NVIDIA RTX 5000 GPUs and 512 GB RAM.
 - A centralized Slurm workload manager for job scheduling.
 - Shared NFS filesystem for isolated per-user file storage.
-- Secure remote access through a two-hop SSH architecture.
+- Secure remote access through a two-hop SSH flow.
+- A standard web-based portal for supporting Jupyter notebooks.
+- A large shared file system for used datasets.
 
 ## 3. User Categories
 
@@ -109,7 +111,7 @@ Unused accounts may be disabled without prior notice.
 
 ## 5. Remote Access & Computing Policy
 
-The AI Lab uses secure two-hop SSH access.
+AIRL uses secure two-hop SSH access.
 Users shall:
 1. Connect to the gateway server.
 2. Authenticate using their assigned credentials.
@@ -129,7 +131,7 @@ Jobs showing prolonged idle GPU utilization may be terminated.
 
 ### 5.1. Default Quotas
 
-The laboratory adopts a priority-based quota system. Default quotas may be adjusted by the laboratory administrator depending on resource availability and approved research requirements.
+AIRL adopts a priority-based quota system. Default quotas may be adjusted by the lab administrator depending on resource availability and approved research requirements.
 
 | User Category          | Slurm Priority | Max Running Jobs | Max GPUs per Job | Max GPUs Concurrently | Max Job Duration |
 | ---------------------- | -------------- | ---------------: | ---------------: | --------------------: | ---------------: |
@@ -157,13 +159,13 @@ Long experiments must be submitted as batch jobs.
 
 ### 5.3. Default Storage Quotas
 
-The laboratory provides 40 TB of shared storage.
+AIRL provides 40 TB of shared storage.
 Storage is divided into three logical areas:
 
 | Storage Area | Purpose                                  | Backup | Auto Cleanup |
 | ------------ | ---------------------------------------- | ------ | ------------ |
 | Home         | Source code, scripts, configuration      | Yes    | No           |
-| Project      | Research datasets and trained models     | Yes    | No           |
+| Project      | Research datasets and trained models     | No     | No           |
 | Scratch      | Temporary files and intermediate results | No     | Yes          |
 
 #### 5.3.1. Home Directory Quota
@@ -204,7 +206,7 @@ No backup is provided.
 
 ### 5.4. Large Dataset Policy
 
-Datasets larger than 100 GB require approval from the laboratory administrator before upload.
+Datasets larger than 100 GB require approval from the lab administrator before upload.
 
 Duplicate copies of publicly available datasets should be avoided whenever possible. Users working on similar projects are encouraged to share a common read-only copy of large datasets to conserve storage space.
 
@@ -217,7 +219,7 @@ For deep learning training jobs:
 - Compress archived models where practical.
 - Delete failed experiment outputs.
 
-Excessive accumulation of checkpoints may result in a request from the laboratory administrator to reclaim storage.
+Excessive accumulation of checkpoints may result in a request from the lab administrator to reclaim storage.
 
 ### 5.6. Additional Resource Requests
 
@@ -282,7 +284,7 @@ The following are prohibited:
 
 Users retain ownership of their research data.
 However:
-- The laboratory does not guarantee permanent storage.
+- AIRL does not guarantee permanent storage.
 - Users are responsible for maintaining independent backups.
 - Users are responsible for removing obsolete files.
 - Temporary files may be deleted periodically.
@@ -327,6 +329,13 @@ The following activities are prohibited:
 - Unauthorized penetration testing
 - Excessive personal computing
 
+### 9.1. Code of Conduct
+
+AIRL system is shared resource used by a wide community. 
+All people involved in its use and operations should try their utmost to be courteous and kind at all times. 
+Members of the AIRL community should be respectful toward one another and endeavor to ensure a welcoming and collegial environment for all. 
+Account holders are also expected to respect privacy of others activities on the system, and not to try to gain access to parts of the system they are not explicitly authorized to access.
+
 ## 10. Monitoring
 
 Lab administrators may monitor:
@@ -340,8 +349,11 @@ Monitoring is performed solely for operational, security, maintenance, and capac
 
 ## 11. Data Privacy
 
-The laboratory respects users' research confidentiality.
+All AIRL current systems are only suitable for storing data with low-level security requirements. This means that they are not to be used to store sensitive data, such as personal information, financial information, or intellectual property. Additionally, they are not to be used to store data that is subject to use agreements that require security controls or audit tracking.
 
+Datasets on AIRL must have been obtained legitimately and AIRL is not to be used for working with unanonymized data or data subject to NDAs or national security restrictions.
+
+AIRL respects users' research confidentiality.
 Administrative access to user files will occur only when necessary for:
 - System maintenance
 - Security investigations
@@ -355,7 +367,7 @@ Lab administrators may terminate jobs that:
 - Exceed allocated limits.
 - Consume excessive resources.
 - Become unresponsive.
-- Violate laboratory policies.
+- Violate AIRL policies.
 - Threaten system stability.
 
 Whenever practical, users will be notified before termination.
@@ -370,7 +382,7 @@ Emergency maintenance may occur without prior notice.
 
 ## 14. Publication Acknowledgment
 
-Users are encouraged to acknowledge the Artificial Intelligence Research Lab in publications, theses, dissertations, and technical reports that benefited from the laboratory resources.
+Users are encouraged to acknowledge the Artificial Intelligence Research Lab in publications, theses, dissertations, and technical reports that benefited from the lab resources.
 
 Suggested acknowledgment:
 
@@ -388,7 +400,7 @@ Violations of these regulations may result in one or more of the following:
 
 ## 16. Policy Updates
 
-These regulations may be revised as laboratory resources, institutional policies, or operational requirements evolve.
+These regulations may be revised as lab resources, institutional policies, or operational requirements evolve.
 
 Users are responsible for complying with the latest published version of the regulations.
 
