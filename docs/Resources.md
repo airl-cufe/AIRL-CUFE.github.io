@@ -4,7 +4,7 @@ AIRL provides access to HPC cluster for Cairo University's Faculty of Engineerin
 
 ## About the HPC Cluster
 
-The HPC cluster is open to all staff members and students on capus. Further information and support is available from AIRL2026@hotmail.com
+The HPC cluster is open to all staff members and students on capus. Further information and support is available from ```info-airl@eng.cu.edu.eg```.
 
 ### Features
 

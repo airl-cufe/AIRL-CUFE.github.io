@@ -82,7 +82,7 @@ Graduation project applicants must submit:
 - Data contribution
 - Dataset description and estimate size
 
-After submitting the request, the faculty supervisor or PI must send us a short confirmation email, verifying the researcher's project/research work. This email should be sent to ....@eng.cu.edu.eg.
+After submitting the request, the faculty supervisor or PI must send us a short confirmation email, verifying the researcher's project/research work. This email should be sent to ```info-airl@eng.cu.edu.eg```.
 
 ### 4.2. Account Approval
 

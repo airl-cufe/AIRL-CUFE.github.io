@@ -23,4 +23,4 @@ AIRL is established in July 2026. Prof. Ahmed Morsy created the lab with funding
 | Mohamed Sayed | Site Reliability Engineer | |
 | Karim Othman | Site Reliability Engineer | |
 
-to contact the admin team, email: AIRL2026@hotmail.com
+to contact the admin team, email: ```info-airl@eng.cu.edu.eg```

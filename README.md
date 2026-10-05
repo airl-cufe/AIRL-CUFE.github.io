@@ -4,7 +4,6 @@ A responsive, dependency-free static website for Cairo University's Artificial I
 
 ## Pages
 
-- `docs/Wiki.md` — Project wiki summarizing the AIRL website and source documentation
 - `public/index.html` — Home
 - `public/about.html` — Mission, history, and staff
 - `public/collaborations.html` — Industry and academic collaboration
