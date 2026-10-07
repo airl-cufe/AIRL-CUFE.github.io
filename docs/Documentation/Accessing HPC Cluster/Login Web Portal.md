@@ -12,10 +12,10 @@ AIRL provides a web portal to access the HPC cluster. This section provides inst
 >You can only use a CUFE email address to get access through the web portal.
 
 3. When you click on Log in, you will be redirected to sign in with GitHub using your Faculty Email.
-![Authentication Page](/JupyterHub%20Login/Auth%20Page.PNG)
+![Authentication Page](./JupyterHub%20Login/Auth%20Page.PNG)
 
 4. After successful authentication, you should see the JupyterHub Launch page.
-![Login Success Page](/JupyterHub%20Login/Login%20Success.PNG)
+![Login Success Page](./JupyterHub%20Login/Login%20Success.PNG)
 
 Note: If you don't have an account or trying to login with a different GitHub account, you will be redirected to a different page.
-![Login Fail Page](/JupyterHub%20Login/Login%20Fail.PNG)
+![Login Fail Page](./JupyterHub%20Login/Login%20Fail.PNG)
