@@ -12,7 +12,13 @@ A responsive, dependency-free static website for Cairo University's Artificial I
 
 ## Preview locally
 
-Serve the `public` directory with a local static file server. The shared header, footer, and Markdown content are fetched at runtime, so opening an HTML file directly from disk will not load them.
+Serve the repository root with a local static file server, then open `/public/`. The shared header, footer, and Markdown content are fetched at runtime, so opening an HTML file directly from disk will not load them.
+
+## Deploy to GitHub Pages
+
+The GitHub Actions workflow publishes the static site on pushes to `main` and on manual runs. It packages `public/` with the public Markdown files used by the site; the `docs/admin/` files and other source documents are not published.
+
+To use `https://AIRL-CUFE.github.io`, the repository must be named `AIRL-CUFE.github.io` and owned by the `AIRL-CUFE` account. After pushing or transferring this project into that repository, set **Settings → Pages → Build and deployment → Source** to **GitHub Actions**. The workflow will deploy automatically on the next push to `main`.
 
 ## Deploy to Netlify
 
