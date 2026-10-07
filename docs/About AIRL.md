@@ -15,11 +15,11 @@ AIRL is established in July 2026. Prof. Ahmed Morsy created the lab with funding
 
 | Name | Role | Email |
 | ---- | ---- | ----- |
-| Prof. Ahmed Morsy | Chairman | amorsy@eng1.cu.edu.eg |
-| Assis. Prof. Moataz Elsisy | Vice-Chariman | moetaz_elsisy@eng.cu.edu.eg |
-| Assis. Prof. Dina Tantawy | Vice-Chariman | dina.tantawy@eng.cu.edu.eg |
-| Assoc. Prof. Ahmed Hamdy | System and HPC Lead | ahamdy@eng.cu.edu.eg |
-| Assis. Prof. Ayman AboElHassan | System and HPC Specialist | ayman.abo.elmaaty@eng.cu.edu.eg |
+| Prof. Ahmed Morsy | Chairman | ```amorsy@eng1.cu.edu.eg``` |
+| Assis. Prof. Moataz Elsisy | Vice-Chariman | ```moetaz_elsisy@eng.cu.edu.eg``` |
+| Assis. Prof. Dina Tantawy | Vice-Chariman | ```dina.tantawy@eng.cu.edu.eg``` |
+| Assoc. Prof. Ahmed Hamdy | System and HPC Lead | ```ahamdy@eng.cu.edu.eg``` |
+| Assis. Prof. Ayman AboElHassan | System and HPC Specialist | ```ayman.abo.elmaaty@eng.cu.edu.eg``` |
 | Mohamed Sayed | Site Reliability Engineer | |
 | Karim Othman | Site Reliability Engineer | |
 

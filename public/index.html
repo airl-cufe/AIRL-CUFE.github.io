@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AIRL | Home</title>
+    <meta
+      name="description"
+      content="The Cairo University Artificial Intelligence Research Lab website for research, documentation, resources, and collaborations."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body data-page="home">
+    <div id="site-header"></div>
+
+    <main class="home-shell">
+      <section class="hero">
+        <div class="hero-content">
+          <span class="kicker">AIRL Community</span>
+          <h1>Research, computing, and collaboration in artificial intelligence.</h1>
+          <p>
+            The Cairo University Artificial Intelligence Research Lab supports AI research,
+            student learning, and high-performance computing for the Faculty of Engineering community.
+          </p>
+        </div>
+      </section>
+
+      <h2 class="section-heading">Explore the lab</h2>
+      <div class="home-grid">
+        <article class="feature-card">
+          <h2>About AIRL</h2>
+          <p>Learn about the lab mission, leadership, and the team supporting research and student development.</p>
+          <a class="card-link" href="./about.html">Read about the lab</a>
+        </article>
+
+        <article class="feature-card">
+          <h2>Documentation</h2>
+          <p>Access user guides, setup steps, HPC workflows, troubleshooting, and getting-started materials.</p>
+          <a class="card-link" href="./documentation.html">Open the docs</a>
+        </article>
+
+        <article class="feature-card">
+          <h2>Resources</h2>
+          <p>Review cluster resources, quotas, storage policies, and data handling guidance for active users.</p>
+          <a class="card-link" href="./resources.html">View resources</a>
+        </article>
+      </div>
+
+      <h2 class="section-heading">Highlights</h2>
+      <div class="topic-grid">
+        <article class="topic-card">
+          <h3>Research support</h3>
+          <p>Support for students, faculty, and staff working on AI, machine learning, and data science projects.</p>
+          <ul>
+            <li>Priority-based compute access</li>
+            <li>GPU-enabled research workflows</li>
+            <li>Collaborative project support</li>
+          </ul>
+        </article>
+
+        <article class="topic-card">
+          <h3>Compute access</h3>
+          <p>Secure remote access, cluster scheduling, and shared resources designed for research workloads.</p>
+          <ul>
+            <li>Two-hop SSH access</li>
+            <li>Slurm job management</li>
+            <li>Jupyter and interactive workflows</li>
+          </ul>
+        </article>
+
+        <article class="topic-card">
+          <h3>Governance</h3>
+          <p>Policies governing user access, infrastructure, data handling, and research compliance.</p>
+          <ul>
+            <li>Access procedures</li>
+            <li>Data and security policy</li>
+            <li>Acceptable use guidance</li>
+          </ul>
+        </article>
+      </div>
+    </main>
+
+    <div id="site-footer"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.0/dist/purify.min.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>

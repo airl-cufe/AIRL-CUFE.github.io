@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Documentation | AIRL</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body data-page="documentation">
+    <div id="site-header"></div>
+
+    <main class="doc-shell">
+      <aside class="doc-sidebar">
+        <input id="doc-search" class="doc-search" type="search" placeholder="Search documentation" aria-label="Search documentation" />
+        <div id="doc-sidebar-list" class="doc-list" aria-live="polite"></div>
+      </aside>
+
+      <div class="doc-content">
+        <div id="doc-content" class="content-panel"></div>
+      </div>
+    </main>
+
+    <div id="site-footer"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.0/dist/purify.min.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>

@@ -6,7 +6,7 @@ Help working with AIRL services is also available through email to ```info-airl@
 
 1. [HPC Cluster](./HPC%20Cluster.md)
 2. [Getting Started Tutorial](./Getting%20Started.md)
-3. [Accessing HPC Cluster](./Accessing%20HPC%20Cluster/)
+3. [Accessing HPC Cluster](./Accessing%20HPC%20Cluster/Login%20SSH.md)
     1. [Logging in with SSH via Terminal](./Accessing%20HPC%20Cluster/Login%20SSH.md)
     2. [Logging in with web portal](./Accessing%20HPC%20Cluster/Login%20Web%20Portal.md)
     3. [SSH Key Setup](./Accessing%20HPC%20Cluster/SSH%20Key%20Setup.md)

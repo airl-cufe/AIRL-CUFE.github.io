@@ -12,7 +12,7 @@ A responsive, dependency-free static website for Cairo University's Artificial I
 
 ## Preview locally
 
-Open `public/index.html` in a browser, or serve the `public` directory with a local static file server.
+Serve the `public` directory with a local static file server. The shared header, footer, and Markdown content are fetched at runtime, so opening an HTML file directly from disk will not load them.
 
 ## Deploy to Netlify
 
