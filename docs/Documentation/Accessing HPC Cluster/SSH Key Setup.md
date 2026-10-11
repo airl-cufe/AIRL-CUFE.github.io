@@ -8,7 +8,7 @@ SSH keys consist of a pair: a public key and a private key.
 
 When you attempt to connect to the HPC system using SSH key authentication, the system uses your public key to initiate a challenge that can only be answered correctly using your private key. If the correct response is received, the system verifies your identity and grants access.
 
-> [!WARNING]
+> ⚠️**WARNING:**
 > Your private key should never be shared with anyone. If someone else obtains your private key, they could potentially gain unauthorized access to any system your key is associated with.
 
 ## Checking for Existing SSH Keys
@@ -31,8 +31,8 @@ If you do not have an existing SSH key, follow these steps.
 4. Passphrase: You will be asked to enter a passphrase for additional security. You can either enter a passphrase or leave it empty and press Enter:
 ```Enter passphrase (empty for no passphrase):```
 
->[!Note]
->The passphrase is optional- you can choose to skip it. However, it adds an extra layer of security for your private key by encrypting it on the disk. If you choose to use a passphrase, you will have to enter it correctly every time you attempt to log in using this SSH key pair
+> ℹ️**Note:**
+> The passphrase is optional- you can choose to skip it. However, it adds an extra layer of security for your private key by encrypting it on the disk. If you choose to use a passphrase, you will have to enter it correctly every time you attempt to log in using this SSH key pair
 
 ## Uploading SSH Key on AIRL
 

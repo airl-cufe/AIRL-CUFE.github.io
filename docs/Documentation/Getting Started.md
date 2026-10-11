@@ -38,6 +38,10 @@ After submitting the request, the faculty supervisor or PI must send us a short 
 
 The first thing you should do when you get a new account is verify that you can log in. AIRL provides multiple ways to log in, including both ssh and web portal.
 
+### Web Portal - Jupyter Notebook
+
+You can log into the web portal for [JupyterHub portal](https://airlws02.tailf6a96c.ts.net/hub). For full detailed instructions please see the [Logging in with web portal](./Accessing%20HPC%20Cluster/Login%20Web%20Portal.md) section for more information.
+
 ### Terminal with SSH
 
 Log into AIRL with the following command in a terminal window. Replace ```USERNAME``` below with your created username:
@@ -46,9 +50,6 @@ You will be prompted for your password.
 
 See [Logging in with SSH via Terminal](./Accessing%20HPC%20Cluster/Login%20SSH.md) section for more information.
 
-### Web Portal - Jupyter Notebook
-
-You can log into the web portal for [JupyterHub portal](https://airlws02.tailf6a96c.ts.net/hub). For full detailed instructions please see the [Logging in with web portal](./Accessing%20HPC%20Cluster/Login%20Web%20Portal.md) section for more information.
 
 ### Shared HPC Clusters
 
