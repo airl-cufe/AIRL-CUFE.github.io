@@ -3,7 +3,7 @@ AIRL provides a web portal to access the HPC cluster. This section provides inst
 
 ## Accessing the Web Portal
 
-1. Navigate to the AIRL [JupyterHub portal URL](https://airlws02.tailf6a96c.ts.net/hub) on your web browser.
+1. Navigate to the AIRL [JupyterHub portal URL](https://193.227.38.179:8443/hub) on your web browser.
 
 2. You will be asked to Log in using GitHub Account
 ![Log In Page](./JupyterHub%20Login/Portal%20Login%20Page.PNG)

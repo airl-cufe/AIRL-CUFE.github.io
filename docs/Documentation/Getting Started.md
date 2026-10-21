@@ -40,7 +40,7 @@ The first thing you should do when you get a new account is verify that you can 
 
 ### Web Portal - Jupyter Notebook
 
-You can log into the web portal for [JupyterHub portal](https://airlws02.tailf6a96c.ts.net/hub). For full detailed instructions please see the [Logging in with web portal](./Accessing%20HPC%20Cluster/Login%20Web%20Portal.md) section for more information.
+You can log into the web portal for [JupyterHub portal](https://193.227.38.179:8443/hub). For full detailed instructions please see the [Logging in with web portal](./Accessing%20HPC%20Cluster/Login%20Web%20Portal.md) section for more information.
 
 ### Terminal with SSH
 
