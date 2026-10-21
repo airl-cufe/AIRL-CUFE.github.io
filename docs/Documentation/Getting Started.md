@@ -100,11 +100,11 @@ One of the first tasks is to get your code, data, and any other files you need i
 ### Running your First Job
 
 At this point you may want to do a test-run of your code. You always want to start small in your test runs, so you should choose a small example that tests the functionality of what you would ultimately like to run on the system.
-You are provided with three starter files inside ```/workspace``` directory. 
+You are provided with three starter files inside ```~/workspace``` directory. 
 - train.py          # your training code (edit this)
 - train.sh          # Bash script to submit a normal GPU Slurm Job
 - train-burst.sh    # Bash script to submit an opportunistic (burst) Slurm Job
 
-You can run the test code by running the following command: ```sbatch /workspace/train.sh```
+You can run the test code by running the following command: ```sbatch ~/workspace/train.sh```
 
 Review the [Running Jobs](./Running%20Jobs.md) section.
