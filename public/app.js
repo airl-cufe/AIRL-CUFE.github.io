@@ -9,7 +9,7 @@ const docEntries = [
   { label: 'Filesystem and File Transfer', path: 'Documentation/File Transfer.md' },
   { label: 'Running Jobs', path: 'Documentation/Running Jobs.md' },
   { label: 'Running Jobs: Prepare Your Files', path: 'Documentation/Running Jobs/1 - Prepare Your Files.md' },
-  { label: 'Running Jobs: Set Up Python', path: 'Documentation/Running Jobs/2 - Set Up Python.md' },
+  { label: 'Running Jobs: AIRL Python Container', path: 'Documentation/Running Jobs/2 - Set Up Python.md' },
   { label: 'Running Jobs: Slurm Script and Resources', path: 'Documentation/Running Jobs/3 - Slurm Script and Resources.md' },
   { label: 'Running Jobs: Submit and Monitor', path: 'Documentation/Running Jobs/4 - Submit and Monitor.md' },
   { label: 'Running Jobs: Results and Checkpoints', path: 'Documentation/Running Jobs/5 - Results and Checkpoints.md' },

@@ -1,6 +1,6 @@
 # Step 3: Configure Your Slurm Script and Request Resources
 
-A Slurm script tells the scheduler what to run and which resources to allocate. Start from AIRL's `~/workspace/train.sh` when possible: its GPU and environment setup is specific to this cluster. The examples below explain common options, but resource names and limits must match AIRL's configuration and your account.
+A Slurm script tells the scheduler what to run and which resources to allocate. Start from AIRL's `~/workspace/train.sh` when possible: its GPU and container setup is specific to this cluster. The examples below explain common options, but resource names and limits must match AIRL's configuration and your account.
 
 ## 1. Inspect the AIRL starter script
 
@@ -10,13 +10,13 @@ Read the starter script before adapting it:
 cat ~/workspace/train.sh
 ```
 
-Look for lines beginning with `#SBATCH`, Python or environment setup commands, and the final command that runs the training program. Copy it to your project before editing if you want to preserve the original:
+Look for lines beginning with `#SBATCH`, the Apptainer command that launches the container, and the final Python command. Copy it to your project before editing if you want to preserve the original:
 
 ```bash
 cp ~/workspace/train.sh ~/my-ml-project/train-job.sh
 ```
 
-Edit `train-job.sh` to run your own script and activate your Python environment. See [Step 2: Set up a Python environment](./2%20-%20Set%20Up%20Python.md).
+Edit `train-job.sh` to run your own Python script inside the AIRL container. The starter script already launches the container and mounts your home directory at `/workspace`; keep that setup when adapting it. See [Step 2: Use the AIRL Python container](./2%20-%20Set%20Up%20Python.md).
 
 ## 2. Common job-script options
 
@@ -44,27 +44,20 @@ These are standard Slurm options, not a complete list. Slurm reads the directive
 - **Run time:** `--time` is the maximum time for the job, not a promise that it will run for that long. Request enough time for the experiment, but avoid an unnecessarily large request.
 - **Partition:** A partition determines which resources may run the job. Use the name in an AIRL starter script or check available partitions with `sinfo`. Ask AIRL support if the appropriate partition is unclear.
 
-AIRL's published [compute-service limits](../../Resources.md#compute-services) list account-category maximums for running jobs, GPUs, and job duration. These are ceilings, not recommended requests or a guarantee of immediate availability. Check current AIRL policy and your account's allocation before submitting. The interactive-session limits do not automatically define batch-job limits.
+AIRL's published [compute-service limits](../../Resources.md) list account-category maximums for running jobs, GPUs, and job duration. These are ceilings, not recommended requests or a guarantee of immediate availability. Check current AIRL policy and your account's allocation before submitting. The interactive-session limits do not automatically define batch-job limits.
 
-## 4. Example script structure
+## 4. Run Python inside the container
 
-This example illustrates where settings go. The CPU and memory values are examples only. Add the GPU and partition directives from the AIRL starter script when a GPU is needed; do not submit those requests based solely on this template.
+The AIRL starter script already contains the Slurm settings and container launch command. Its Python command follows this pattern:
 
 ```bash
-#!/bin/bash
-#SBATCH --job-name=training
-#SBATCH --output=training-%j.out
-#SBATCH --time=01:00:00
-#SBATCH --ntasks=1
-#SBATCH --cpus-per-task=2
-#SBATCH --mem=4G
-
-cd /home/USERNAME/my-ml-project
-source .venv/bin/activate
-python train.py
+srun /usr/bin/apptainer exec --nv \
+  --bind "$LABHOME":/workspace --pwd /workspace \
+  /opt/ailab/images/ailab-base.sif \
+  python /workspace/my-ml-project/train.py
 ```
 
-Replace `USERNAME`, the project path, and the Python file with your own. The `%j` token in the output name is replaced with the job ID. If you set an output path inside a subfolder (for example, `logs/`), create that folder before submitting; Slurm may need to open the output file before the script starts.
+The provided `train.sh` defines `LABHOME` and includes the Slurm directives and container setup required by AIRL. Copy it and change the Python script path to the file you want to run. Keep your script and data under your home directory so they are available in `/workspace`. Do not add environment activation or package installation commands. If you set an output path inside a subfolder (for example, `logs/`), create that folder before submitting; Slurm may need to open the output file before the script starts.
 
 The `#SBATCH` lines are configuration for Slurm, not shell commands. The lines after them are run by the shell on the compute node.
 
@@ -73,7 +66,7 @@ The `#SBATCH` lines are configuration for Slurm, not shell commands. The lines a
 Before submission, confirm that:
 
 1. Every referenced file and folder exists.
-2. The script activates the environment containing your packages.
+2. The script runs your Python file inside the AIRL container.
 3. The Python command runs the intended program.
 4. CPU, memory, GPU, partition, and time requests use AIRL-supported settings and fit your account.
 5. Output and checkpoint paths point to storage with enough space.

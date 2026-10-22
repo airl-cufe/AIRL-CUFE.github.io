@@ -46,10 +46,10 @@ List the files with `ls ~/workspace`. If you use the starter example, follow the
 
 Use `ls` to confirm the file names and `pwd` to confirm your current folder. Linux file names are case-sensitive: `Train.py` and `train.py` are different names.
 
-Note the full path to your Python file and data. Your job script will need to refer to those paths. For example, if you uploaded a file to `~/my-ml-project`, its path starts with `/home/USERNAME/my-ml-project/` (replace `USERNAME` with your username).
+Note the path to your Python file and data. The AIRL starter script mounts your home directory at `/workspace` inside the container, so a file at `~/my-ml-project/train.py` is available to Python as `/workspace/my-ml-project/train.py`.
 
 ## 5. Do a small test first
 
 If your script can use a small sample of the data or a small number of training steps, use that for the first run. It is easier to spot a missing file or package in a short test than after a long job.
 
-Next: [Set up a Python environment](./2%20-%20Set%20Up%20Python.md).
+Next: [Use the AIRL Python container](./2%20-%20Set%20Up%20Python.md).
